@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: greenyellow;
+    scroll-behavior: smooth;
+    text-transform: uppercase;
+    overscroll-behavior: none; /* 처음 로딩시 스크롤 올렸을때 페이지가 바운스되는거 방지 */
+}
+html, body{
+    background-color: #fff;
+    width: 100%; height: 100%;
+}
+main{
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    /* border: 1px solid red; */
+    overflow-y: scroll;
+}
+.container{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+}
+.content__slider__container{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 3px solid yellow; */
+}
+.content__slider{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    display: flex;
+    will-change: transform;
+}
+.project{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+.project img{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    will-change: transform;
+}
+.glass__div{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 255, 255, 0.184);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2rem;
+    clip-path: polygon(0% 20%, 20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%); /* 잘라냄 */
+}
+p{
+    margin: .5rem;
+    font-size: .5rem;
+}
+.flash{
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    background-color: greenyellow;
+    margin-left: .5rem;
+    animation: flash .5s infinite linear;
+}
+@keyframes flash{
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
